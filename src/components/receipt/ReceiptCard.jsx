@@ -22,3 +22,5 @@ function ReceiptCard({ receipt }) {
     </div>
   );
 }
+
+export default ReceiptCard;
