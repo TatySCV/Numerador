@@ -68,7 +68,7 @@ function SearchableSelect({
       className="relative"
       ref={containerRef}
     >
-      <label className="block mb-2 font-medium">
+      <label className="block mb-2 font-bold text-[#1e3a8a]">
         {label}
 
         {required && (
@@ -95,8 +95,8 @@ function SearchableSelect({
           rounded-lg
           outline-none
           focus:ring-2
-          focus:ring-blue-500
-          focus:border-blue-500
+          focus:ring-amber-500
+          focus:border-amber-500
         "
       />
 
@@ -113,6 +113,7 @@ function SearchableSelect({
             shadow-lg
             max-h-60
             overflow-y-auto
+            focus:border-amber-500
           "
         >
           {filteredOptions.length > 0 ? (
@@ -128,6 +129,7 @@ function SearchableSelect({
                   text-left
                   px-4
                   py-2
+                  focus:border-amber-500
                   hover:bg-slate-100
                 "
               >

@@ -8,7 +8,7 @@ function SelectInput({
 }) {
   return (
     <div>
-      <label className="block mb-2 font-medium">
+      <label className="block mb-2 font-bold text-[#1e3a8a]">
         {label}
         {required && <span className="text-red-500 ml-1">*</span>}
       </label>
@@ -21,8 +21,11 @@ function SelectInput({
     w-full
     px-4
     py-2
-    border
-    rounded-lg
+    border-2
+    border-slate-300
+    rounded-md
+    focus:border-amber-500
+    outline-none
   "
       >
         <option value="">Seleccione una opción</option>

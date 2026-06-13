@@ -7,7 +7,7 @@ function Button({
       type={type}
       className="
         w-full
-        bg-blue-600
+        bg-[#1e3a8a]
         text-white
         py-3
         rounded-lg
