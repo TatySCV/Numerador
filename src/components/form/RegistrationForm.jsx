@@ -42,21 +42,21 @@ function RegistrationForm() {
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const validationErrors = validateRegistrationForm(
-      formData,
-      documentError
-    );
+  const validationErrors = validateRegistrationForm(formData, documentError);
+  setErrors(validationErrors);
 
-    setErrors(validationErrors);
+  if (Object.keys(validationErrors).length > 0) return;
 
-    if (Object.keys(validationErrors).length > 0) return;
+  const motivoSeleccionado = visitReasons.find(
+    (r) => r.value === formData.motivoVisita
+  );
 
-    navigate("/receipt", {
-      state: generateReceipt(formData.motivoVisita),
-    });
-  };
+  navigate("/receipt", {
+    state: generateReceipt(motivoSeleccionado), // Pasamos el objeto, no el string
+  });
+};
 
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
